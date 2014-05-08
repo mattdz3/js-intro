@@ -78,17 +78,11 @@ var mycar = {
 	color: "black"
 };
 
-window.alert(mycar.make);
-window.alert(mycar.model);
-window.alert(mycar.year);
-window.alert(mycar.color);
+
 
 myfunc(mycar);
 
-window.alert(mycar.make);
-window.alert(mycar.model);
-window.alert(mycar.year);
-window.alert(mycar.color);
+
 
 var add = function (a, b, c) {
 	return 'a' + 'b' + 'c';
@@ -125,6 +119,7 @@ var user = prompt("Rock, Paper, or Scissors?");
 console.log(user);
 
 if (user == "rock") {
+
 	console.log ("Good Job");
 
 } else if (user == "paper") {
@@ -144,13 +139,47 @@ var computer = Math.random();
 
 console.log(computer);
 
-if (computer < .3) {
+if (computer < .34) {
 
-	console.log("YOU WIN!")
+	computer = "rock";
 
-} else {
+} else if (computer < .67) { 
 
-	console.log("YOU LOSE!")
+	computer = "paper";
+
+} else if (computer > .67) {
+
+	computer = "scissors";
+}
+
+
+if (computer == user) {
+
+	console.log("Tie!");
+
+} else if (computer == "rock" && user == "paper") {
+
+	console.log("Win");
+
+} else if (computer == "paper" && user == "scissors") {
+
+	console.log("Win");
+
+} else if (computer == "scissors" && user == "rock") {
+
+	console.log("Win");
+
+} else if (computer == "rock" && user == "scissors") {
+
+	console.log("Lose");
+
+} else if (computer == "paper" && user == "rock") {
+
+	console.log("Lose");
+
+} else if (computer == "scissors" && user == "paper") {
+	
+	console.log("Lose");
 }
 
 
